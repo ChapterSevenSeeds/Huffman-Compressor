@@ -5,7 +5,7 @@ Compresses a file using a Huffman binary tree. File format is as follows:
 
 {header}{number trailing zeros at the end of the data}{data}
 
-The header is a bitwise representation of the tree. From top to bottom, left to right, a one represents that there is a subtree that we need to examine whereas a zero represents a symbol at the end of that branch. Immediately following the zero is the byte that represents the symbol. The end of the header is padded with zeros to fill up the byte to keep the big end of the final byte in the correct location. These extra zeros are ignored once the tree is full.
+The header is a bitwise representation of the tree. From top to bottom, left to right, a one signifies there is a subtree that we need to examine whereas a zero represents a symbol at the end of that branch. Immediately following the zero is the byte that represents the symbol. The end of the header is padded with zeros to fill up the byte to keep the big end of the final byte in the correct location. These extra zeros are ignored once the tree is full.
 
 The next byte represents the amount of trailing zeros at the end of the final byte of the data.
 
