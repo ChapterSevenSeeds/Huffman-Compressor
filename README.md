@@ -9,7 +9,7 @@ The header is a bitwise representation of the tree. From top to bottom, left to 
 
 The next byte represents the amount of trailing zeros at the end of the final byte of the data.
 
-The data is the compressed form of the input data. The most commonly occuring symbols in the input are represented with the least amount of bits whereas the opposite is true for the least commonly occuring symbols. 
+The data is the compressed form of the input data. The most commonly occurring symbols in the input are represented with the least amount of bits whereas the opposite is true for the least commonly occurring symbols. 
 
 ## compress.js
 Parses the input file, constructs the binary tree, converts the tree into binary form (as described above) as well as converts the input bytes into the compressed versions via recursive walk, concatenates the two together delimited by a byte representing the count trailing zeros in the final byte of the compressed data, converts the concatenated bit string into bytes, and writes the bytes to a file.
